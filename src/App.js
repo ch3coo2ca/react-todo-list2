@@ -23,17 +23,23 @@ class App extends React.Component {
 
     handleCreate = () => {
         const { input, todos } = this.state;
-        this.setState({
-            input: '',
-            // id 값 증가 후 todos 배열에 추가
-            todos: todos.concat({
-                id: this.id++,
-                text: input,
-                isChecked: false
-            })
-        });
+        console.log(input.length);
 
-        console.log(todos);
+        if (input.length > 0) {
+            this.setState({
+                input: '',
+                // id 값 증가 후 todos 배열에 추가
+                todos: todos.concat({
+                    id: this.id++,
+                    text: input,
+                    isChecked: false
+                })
+            });
+
+        } else {  
+            alert('텍스를 입력해주세요! '); 
+        }
+
     }
 
 
@@ -45,10 +51,11 @@ class App extends React.Component {
 
     handleToggle = (id) => {
         const { todos } = this.state;
-        const selected = todos[id];
+        const idx = todos.findIndex(todo => todo.id === id);
+        const selected = todos[idx];
 
         const newTodos = [...todos];
-        newTodos[id] = {
+        newTodos[idx] = {
             ...selected,
             isChecked: !selected.isChecked
         };
@@ -57,7 +64,6 @@ class App extends React.Component {
             todos: newTodos
         });
     }
-
 
     handleRemove = (id) => {
         const { todos } = this.state;

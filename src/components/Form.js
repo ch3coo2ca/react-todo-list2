@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Form.css';
 
 
@@ -23,5 +24,9 @@ const Form = ({ value, onChange, onCreate, onKeyPress }) => {
         </div>
     );
 } 
+
+Form.propTypes = {
+    value : PropTypes.string.isRequired
+}
 
 export default Form; 
