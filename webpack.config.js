@@ -24,8 +24,14 @@ module.exports = {
                 exclude: /node_modules/,
                 query: {
                     cacheDirectory: true,
-                    presets: ['es2015', 'react']
+                    presets: ['es2015', 'react', 'stage-0']
                 }
+            }, {
+                // Preprocess your css files
+                // you can add additional loaders here (e.g. sass/less etc.)
+                test: /\.css$/,
+                exclude: /node_modules/,
+                use: ['style-loader', 'css-loader'],
             }
         ]
     },

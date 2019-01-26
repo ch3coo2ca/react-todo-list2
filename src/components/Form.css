@@ -1,0 +1,25 @@
+.form {
+    display: flex; 
+} 
+
+.form input {
+    flex : 1; 
+    font-size : 1.3rem; 
+    border :none;   
+    outline: none; /* input box 테두리 삭제*/
+    border-bottom:  2px solid #c5f6fa; 
+} 
+
+.button-create {
+    padding : 0.5rem 1rem; 
+    font-size: 1.2rem; 
+    background: #15aabf; 
+    border-radius: 0.8rem; 
+    color : white;  
+    cursor: pointer; 
+    margin-left: 1rem;
+} 
+
+.button-create:hover {
+    background:  #22b8cf;
+}
