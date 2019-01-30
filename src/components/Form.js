@@ -15,7 +15,7 @@ const Form = ({ value, onChange, onCreate, onKeyPress }) => {
             <input
                 value={value}
                 onChange={onChange}
-                onKeyPress={onkeypress} />
+                onKeyPress={onKeyPress} />
 
             <div
                 className="button-create"

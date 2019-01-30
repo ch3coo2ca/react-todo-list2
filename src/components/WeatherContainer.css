@@ -1,0 +1,8 @@
+.weather-container {
+    background: #f8f9fa; 
+    margin-top: 4rem;  
+    width:512px; 
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15), 0 3px 6px rgba(0, 0, 0, 0.23); 
+
+} 
+

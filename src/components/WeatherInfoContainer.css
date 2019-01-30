@@ -1,0 +1,43 @@
+.weather-location {
+    font-size: 1.8rem; 
+    font-weight: bold; 
+    padding: 2rem; 
+    color: #495057;
+    text-align: center;
+}  
+
+
+.weather-info {
+    font-size : 1.2 rem; 
+    padding: 1.2rem; 
+    font-weight: 500;
+}
+
+
+.weather-degree {
+    float: left;
+    width: 50%;
+    padding: 0.8rem;
+}
+
+.weather-humidity {
+    padding: 0.8rem;
+}
+.icon {
+  float: left;
+  padding: 0.4rem;
+  font-size: 1.8rem;
+  margin-right: 0.8rem;
+} 
+
+.degree-icon {
+    color: #ff6b6b;
+}
+
+.humidity-icon {
+    color : #74c0fc;
+}
+
+.degree-container, .humidity-container {
+    color : #495057;
+}

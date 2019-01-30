@@ -2,7 +2,8 @@ import React from 'react';
 import TodoListContainer from './components/TodoListContainer.js';
 import Form from './components/Form.js';
 import TodoItemList from './components/TodoItemList.js';
-
+import WeatherContainer from './components/WeatherContainer.js';
+import './components/App.css';
 class App extends React.Component {
     id = 3
 
@@ -36,15 +37,15 @@ class App extends React.Component {
                 })
             });
 
-        } else {  
-            alert('텍스를 입력해주세요! '); 
+        } else {
+            alert('텍스를 입력해주세요! ');
         }
 
     }
 
 
     handleKeyPress = (e) => {
-        if (e.key === 'Enter') { //엔터 키 이벤트 
+        if (e.key == 'Enter') { //엔터 키 이벤트 
             this.handleCreate();
         }
     }
@@ -87,6 +88,8 @@ class App extends React.Component {
         } = this;
 
         return (
+            <div className="outer-container"> 
+            <WeatherContainer />
             <TodoListContainer form={(<Form
                 value={input}
                 onChange={handleChange}
@@ -99,6 +102,7 @@ class App extends React.Component {
                     onToggle={handleToggle}
                     onRemove={handleRemove} />
             </TodoListContainer>
+            </div>
         );
     }
 }

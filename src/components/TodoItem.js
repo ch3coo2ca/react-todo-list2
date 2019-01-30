@@ -24,7 +24,7 @@ class TodoItem extends React.Component {
                 }}> &times;
                 </div>
 
-                <div className={`todo-text${isChecked && 'checked'}`}>
+                <div className={`todo-text ${isChecked && 'checked'}`}>
                     <div>{text}</div>
                 </div>
 
